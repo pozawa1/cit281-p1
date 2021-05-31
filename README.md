@@ -1,37 +1,59 @@
-## Welcome to GitHub Pages
+# Objectives
+1. Gain experience accessing your operating system's command line interface (CLI)
+2. Gain experience working with CLI commands
+3. Gain experience working with Visual Studio Code (VSCode)
+4. Gain experience writing and executing non-web server Node.js JavaScript code
 
-You can use the [editor on GitHub](https://github.com/pozawa1/cit281-p1/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+# Technologies Used
+- Terminal
+- VSCode
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+# Part 1
+Complete [Lab 1](https://pozawa1.github.io/cit281-lab1/)
 
-### Markdown
+# Part 2
+Use command line commands to create a folder structure. 
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+![p1-folders](https://user-images.githubusercontent.com/83732149/120233199-199b4600-c20a-11eb-8cdb-e12416d18eb5.png)
 
-```markdown
-Syntax highlighted code block
+# Part 3
+Use the ping utility to learn how to break out of a command line operation that appears to be non-functional.
 
-# Header 1
-## Header 2
-### Header 3
+![p1-break](https://user-images.githubusercontent.com/83732149/120233317-62eb9580-c20a-11eb-9f6a-052e535a0fc8.png)
 
-- Bulleted
-- List
+Ping a domain that will respond.
 
-1. Numbered
-2. List
+![p1-ping](https://user-images.githubusercontent.com/83732149/120233293-55361000-c20a-11eb-87da-a3b482d40e8f.png)
 
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+# Part 4
+Create a JavaScript program that outputs to the console the day of the week of the current day.
+```
+function getDay() {
+let daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+let date = new Date();
+let weekday = date.getDay();
+return (daysOfWeek[weekday]);
+}
+console.log(getDay());
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+# Part 5
+Create a Javascript Program that outputs to the console a string of random length between 5 - 25 characters (range inclusive) in length, that consists of all random lowercase letters from the English alphabet.
+```
+function randomString() {
+    let result = "";
+    let alphabet = 'abcdefghijklmnopqrstuvwxyz';
 
-### Jekyll Themes
+    function getRandomInteger() {
+        let min = 5;
+        let max = 25;
+        return randomInt = Math.floor(Math.random() * (max - min) + min);
+    }    
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/pozawa1/cit281-p1/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+    for ( let i = 0; i < getRandomInteger(); i++ ) {
+        result += alphabet.charAt(randomInt);
+    }
 
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+    return result;
+}
+```
