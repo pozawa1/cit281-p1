@@ -1,0 +1,41 @@
+// p1-date.js
+
+function getDay() {
+// days of week array
+let daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+let date = new Date();
+let weekday = date.getDay();
+return (daysOfWeek[weekday]);
+}
+
+console.log(getDay());
+// returns "Friday" on 4/9/21
+
+// p1-random.js
+
+/*
+// Phil's Code: Returns a random number between min (inclusive) and max (exclusive)
+function getRandomInteger(min, max) {
+    return Math.floor(Math.random() * (max - min) + min);
+}
+*/
+
+function randomString() {
+    let result = "";
+
+    // declare alphabet characters
+    let alphabet = 'abcdefghijklmnopqrstuvwxyz';
+
+    // Modified Phil's code to generate random integer between 5 and 25
+    function getRandomInteger() {
+        let min = 5;
+        let max = 25;
+        return randomInt = Math.floor(Math.random() * (max - min) + min);
+    }    
+
+    for ( let i = 0; i < getRandomInteger(); i++ ) {
+        result += alphabet.charAt(randomInt);
+    }
+
+    return result;
+}
